@@ -3,10 +3,13 @@ export class Activatus{
   yDiff = 0;
   timer = false;
   canActivate(params, routeConfig, navigationInstruction){
+
   }
 
   attached(){
     $(this.obj).css('background-color', 'blue');
+    $(this.obj).css('background-color', 'blue');
+    this.changeTime()
   }
 
   draggable(evt){
@@ -39,5 +42,15 @@ export class Activatus{
       _.previousX = _.currentX
       _.previousY = _.currentY
     }.bind(this), 8);
+  }
+
+  changeTime(){
+    var time = $("#time").val() + "s"
+    $(".animator").css({
+      '-moz-animation-duration': time,
+      '-webkit-animation-duration': time,
+      '-o-animation-duration': time,
+      '-ms-animation-duration': time,
+    });
   }
 }
