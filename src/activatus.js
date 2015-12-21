@@ -12,13 +12,13 @@ export class Activatus{
   draggable(evt){
     this.previousX = evt.clientX
     this.previousY = evt.clientY
-    $(window).on("mousemove", function(e){
+    $(evt.target).on("mousemove", function(e){
       this.move(e)
     }.bind(this))
   }
 
-  clear(){
-    $(window).off("mousemove")
+  clear(evt){
+    $(evt.target).off("mousemove")
   }
 
   move(e){
@@ -27,16 +27,17 @@ export class Activatus{
     }
     this.timer = setTimeout(function() {
       // イベント中の処理
-      this.currentX = e.clientX
-      this.currentY = e.clientY
-      this.xDiff = this.xDiff + (this.currentX - this.previousX)
-      this.yDiff = this.yDiff + (this.currentY - this.previousY)
-      if(this.xDiff < 0){ this.xDiff = 0}
-      if(this.yDiff < 0){ this.yDiff = 0}
-      $(e.target).css('left', this.xDiff)
-      $(e.target).css('top', this.yDiff)
-      this.previousX = this.currentX
-      this.previousY = this.currentY
-    }.bind(this), 12);
+      var _ = this
+      _.currentX = e.clientX
+      _.currentY = e.clientY
+      _.xDiff = _.xDiff + (_.currentX - _.previousX)
+      _.yDiff = _.yDiff + (_.currentY - _.previousY)
+      if(_.xDiff < 0){ _.xDiff = 0}
+      if(_.yDiff < 0){ _.yDiff = 0}
+      $(e.target).css('left', _.xDiff)
+      $(e.target).css('top', _.yDiff)
+      _.previousX = _.currentX
+      _.previousY = _.currentY
+    }.bind(this), 8);
   }
 }

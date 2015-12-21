@@ -14,8 +14,8 @@
 
 .activatus .stage .obj{
   position: absolute;
-  height: 32px;
-  width: 32px;
+  height: 64px;
+  width: 64px;
   background-color: red;
   cursor: pointer;
 }
@@ -23,4 +23,50 @@
 .activatus .settings{
   background-color: blue;
   height: 400px;
+}
+
+.obj {
+-moz-animation-name: anime1;
+-moz-animation-duration: 5s;
+-moz-animation-timing-function: ease;
+-moz-animation-iteration-count: infinite;
+-moz-animation-animation-direction: alternate;
+
+-webkit-animation-name: anime1;
+-webkit-animation-duration: 5s;
+-webkit-animation-timing-function: ease;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-direction: alternate;
+
+-o-animation-name: anime1;
+-o-animation-duration: 5s;
+-o-animation-timing-function: ease;
+-o-animation-iteration-count: infinite;
+-o-animation-direction: alternate;
+
+-ms-animation-name: anime1;
+-ms-animation-duration: 5s;
+-ms-animation-timing-function: ease;
+-ms-animation-iteration-count: infinite;
+-ms-animation-direction: alternate;
+}
+
+@-moz-keyframes anime1 {
+0% {width: 50px; height: 50px; background-color: aqua;}
+100% {width: 200px; height: 50px; background-color: blue;}
+}
+
+@-webkit-keyframes anime1 {
+0% {width: 50px; height: 50px; background-color: aqua;}
+100% {width: 200px; height: 50px; background-color: blue;}
+}
+
+@-o-keyframes anime1 {
+0% {width: 50px; height: 50px; background-color: aqua;}
+100% {width: 200px; height: 50px; background-color: blue;}
+}
+
+@-ms-keyframes anime1 {
+0% {width: 50px; height: 50px; background-color: aqua;}
+100% {width: 200px; height: 50px; background-color: blue;}
 }
