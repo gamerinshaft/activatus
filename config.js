@@ -30,6 +30,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "components/jqueryui": "github:components/jqueryui@1.11.4",
     "core-js": "npm:core-js@1.2.6",
+    "cowboy/jquery-throttle-debounce": "github:cowboy/jquery-throttle-debounce@master",
     "fetch": "github:github/fetch@0.10.1",
     "font-awesome": "npm:font-awesome@4.5.0",
     "lodash": "npm:lodash@3.10.1",
