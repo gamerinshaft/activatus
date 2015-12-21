@@ -1,25 +1,33 @@
-import $ from 'jquery';
-
 export class Activatus{
-  evt = ""
+  xDiff = 0;
+  yDiff = 0;
   canActivate(params, routeConfig, navigationInstruction){
-
   }
 
   attached(){
-    console.log(this.obj)
     $(this.obj).css('background-color', 'blue');
   }
 
   draggable(evt){
-    $(window).on("mousemove", this.move.bind(this, evt))
+    this.previousX = evt.clientX
+    this.previousY = evt.clientY
+    $(window).on("mousemove", function(e){
+      this.move(e)
+    }.bind(this))
   }
 
   clear(){
     $(window).off("mousemove")
   }
 
-  move(evt){
-    console.log("evt")
+  move(e){
+    this.currentX = e.clientX
+    this.currentY = e.clientY
+    this.xDiff = this.xDiff + (this.currentX - this.previousX)
+    this.yDiff = this.yDiff + (this.currentY - this.previousY)
+    $(e.target).css('left', this.xDiff)
+    $(e.target).css('top', this.yDiff)
+    this.previousX = this.currentX
+    this.previousY = this.currentY
   }
 }
