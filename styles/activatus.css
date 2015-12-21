@@ -1,3 +1,25 @@
 .activatus{
-  color: red !important;
+  color: white !important;
+}
+
+.activatus .container{
+  margin-top: 24px;
+}
+
+.activatus .stage{
+  height: 400px;
+  background-color: rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.activatus .stage .obj{
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background-color: red;
+}
+
+.activatus .settings{
+  background-color: blue;
+  height: 400px;
 }
