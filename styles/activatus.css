@@ -14,8 +14,8 @@
 
 .activatus .stage .obj{
   position: absolute;
-  height: 8px;
-  width: 8px;
+  height: 18px;
+  width: 18px;
   background-color: red;
 }
 
