@@ -1,0 +1,17 @@
+nav.local-nav{
+  background-color: rgba(0,0,0,0.4);
+  border-bottom: 0px;
+}
+
+nav.local-nav .navbar-nav .au-target.active a{
+  background-color: transparent;
+  color: white;
+  border-bottom: solid 2px white;
+  padding-bottom: 13px;
+}
+nav.local-nav .navbar-nav .au-target a, nav.local-nav a.navbar-brand{
+  color: #aaa;
+}
+nav.local-nav .navbar-nav .au-target a:hover, nav.local-nav a.navbar-brand:hover{
+  color: white;
+}
