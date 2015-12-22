@@ -25,10 +25,10 @@
   padding: 0;
 }
 
-.activatus ul.settings li.time{
+.activatus ul.settings li{
   list-style: none;
 }
-.activatus ul.settings li.time h4{
+.activatus ul.settings li h4{
   margin: 0;
   padding: 8px;
 }
@@ -72,7 +72,7 @@
 }
 
 .activatus .stage .obj {
--moz-animation-name: anime1;
+/*-moz-animation-name: anime1;
 -moz-animation-duration: 5s;
 -moz-animation-timing-function: ease;
 -moz-animation-iteration-count: infinite;
@@ -94,7 +94,7 @@
 -ms-animation-duration: 5s;
 -ms-animation-timing-function: ease;
 -ms-animation-iteration-count: infinite;
--ms-animation-direction: alternate;
+-ms-animation-direction: alternate;*/
 }
 
 @-moz-keyframes progressBar {
@@ -116,7 +116,7 @@
 0% {width: 0px; background-color: green;}
 100% {width: 100%; background-color: red;}
 }
-
+/*
 @-moz-keyframes anime1 {
 0% {width: 50px; height: 50px; background-color: aqua;}
 100% {width: 200px; height: 50px; background-color: blue;}
@@ -135,4 +135,4 @@
 @-ms-keyframes anime1 {
 0% {width: 50px; height: 50px; background-color: aqua;}
 100% {width: 200px; height: 50px; background-color: blue;}
-}
+}*/
